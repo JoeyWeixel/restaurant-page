@@ -1,5 +1,3 @@
-import createHome from "./home";
+ import initializePage from "./page";
 
-const content = document.getElementById('content');
-
-createHome();
+ initializePage();
