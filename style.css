@@ -2,7 +2,7 @@
 
 :root{
   --main-bg-color: #fdf6f0;
-  --frame-color: #fbd3d3;
+  --frame-color: rgb(251, 211, 211);
   --bookend-bg-color: rgb(183, 226, 225);
   --creamSoda: #f6d695;
   --bookend-shadow: rgba(98, 179, 179, 0.602);
@@ -44,11 +44,9 @@ div.selections{
   width: clamp(40%, 800px, 100%);
 }
 
-div.header div.selections div{
+div.header div.selections p{
   font-size: 1.5rem;
-  padding: 0em 1em 0em 1em;
   height: 100%;
-
 }
 
 div.header div.selections p.title{
@@ -61,8 +59,12 @@ div#main{
   justify-self: center;
   align-self: center;
   display: grid;
+  justify-items: center;
+  align-items: center;
   gap: 40px;
 }
+
+/* HOME STYLING */
 
 div.spotlight{
   display: grid;
@@ -100,6 +102,66 @@ div.slogan p{
 
 div.slogan p.aside{
   font-size: 70%;
+}
+
+/* MENU STYLING */
+
+div.menu{
+  width: 80%;
+  background-color: rgb(251, 211, 211, .6);
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+div.menu .card{
+  display: flex;
+  background-color: var(--frame-color);
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+div.menu .card img{
+  height: 200px
+}
+
+/* CONTACT STYLING */
+
+div.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+div.contact div.location{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+div.contact p.title{
+  font-size: 2rem;
+}
+
+div.contact div.socials{
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  gap: .5rem;
+}
+
+div.contact div.socials p.greeting{ 
+  grid-area: 1 / 1 / 1 / 4;
 }
 
 div.footer{
