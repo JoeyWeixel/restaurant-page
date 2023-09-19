@@ -2,6 +2,8 @@ import createHome from "./home";
 import createMenu from "./menu";
 import createContact from "./contact";
 
+let curPage = 0;
+
 function createHeader(){
   const header = document.createElement('div');
   content.appendChild(header);
@@ -57,6 +59,7 @@ function createImg (src, alt){
 
 function createHomeButton(){
   const homeButton = document.createElement('p');
+  homeButton.id = "homeButton";
   homeButton.textContent = "Home";
   homeButton.addEventListener('click', (e) => updatePage(createHome))
   return homeButton;
@@ -64,6 +67,7 @@ function createHomeButton(){
 
 function createMenuButton(){
   const menuButton = document.createElement('p');
+  menuButton.id = "menuButton";
   menuButton.textContent = "Menu";
   menuButton.addEventListener('click', (e) => updatePage(createMenu))
   return menuButton;
@@ -71,6 +75,7 @@ function createMenuButton(){
 
 function createContactButton(){
   const contactButton = document.createElement('p');
+  contactButton.id = "contactButton";
   contactButton.textContent = "Contact";
   contactButton.addEventListener('click', (e) => updatePage(createContact))
   return contactButton;
@@ -82,13 +87,22 @@ function initializePage(){
   content.appendChild(createMainContent());
   content.appendChild(createFooter());
 
-  updatePage(createMenu);
+  updatePage(createHome);
+}
+
+function resetButtons(){
+  const homeButton = document.getElementById('homeButton');
+  homeButton.classList.remove('active');
+  const contactButton = document.getElementById('contactButton');
+  contactButton.classList.remove('active');
+  const menuButton = document.getElementById('menuButton');
+  menuButton.classList.remove('active');
 }
 
 function updatePage(newPage){
    const main = document.getElementById('main');
    main.innerHTML = '';
-
+   resetButtons();
    newPage();
 }
 

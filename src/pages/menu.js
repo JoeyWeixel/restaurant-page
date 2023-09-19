@@ -1,4 +1,7 @@
 function createMenu(){
+  const menuButton = document.getElementById('menuButton');
+  menuButton.classList.add('active');
+
   const main = document.getElementById('main');
   const menu = document.createElement('div');
   main.appendChild(menu);

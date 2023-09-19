@@ -1,4 +1,7 @@
 function createHome() {
+  const homeButton = document.getElementById('homeButton');
+  homeButton.classList.add('active');
+
   const home = document.getElementById('main');
   //spotlight
 

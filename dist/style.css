@@ -49,6 +49,16 @@ div.header div.selections p{
   height: 100%;
 }
 
+div.header div.selections p.active{
+  text-decoration: underline;
+  font-size: 1.6rem;
+}
+
+div.header div.selections :active{
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
 div.header div.selections p.title{
   font-size: 2rem;
   width: fit-content;

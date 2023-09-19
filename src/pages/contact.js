@@ -1,4 +1,7 @@
 function createContact (){
+  const contactButton = document.getElementById('contactButton');
+  contactButton.classList.add('active');
+
   const main = document.getElementById('main');
   const contact = document.createElement('div');
   main.append(contact);
