@@ -13,7 +13,7 @@ function createHeader(){
 
   const title = document.createElement('p');
   title.classList.add('title');
-  title.textContent = 'The Creamery';
+  title.textContent = 'Ice Cream Parlor';
   headerSelections.appendChild(title);
 
   headerSelections.appendChild(createHomeButton());
@@ -82,7 +82,7 @@ function initializePage(){
   content.appendChild(createMainContent());
   content.appendChild(createFooter());
 
-  updatePage(createHome);
+  updatePage(createMenu);
 }
 
 function updatePage(newPage){
