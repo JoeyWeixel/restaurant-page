@@ -1,3 +1,8 @@
+import instagramImg from '/Users/joeyweixel/repos/restaurant-page/src/instagram_icon.png';
+import facebookImg from '/Users/joeyweixel/repos/restaurant-page/src/facebook_icon.png';
+import twitterImg from '/Users/joeyweixel/repos/restaurant-page/src/twitter_icon.png';
+import mapImg from '/Users/joeyweixel/repos/restaurant-page/src/map.avif';
+
 function createContact (){
   const contactButton = document.getElementById('contactButton');
   contactButton.classList.add('active');
@@ -22,7 +27,7 @@ function createContact (){
   address.textContent = "123 N High St, Columbus OH, 43201";
   location.appendChild(address);
 
-  const map = createImg('/Users/joeyweixel/repos/restaurant-page/src/map.avif', 'Map of 123 N High St');
+  const map = createImg(mapImg, 'Map of 123 N High St');
   map.classList.add('map');
   location.appendChild(map);
 
@@ -37,9 +42,9 @@ function createContact (){
   followUs.textContent = 'Follow us on social media!';
   socials.appendChild(followUs);
 
-  const insta = createImg('/Users/joeyweixel/repos/restaurant-page/src/instagram_icon.png', 'Link to our instagram page');
-  const facebook = createImg('/Users/joeyweixel/repos/restaurant-page/src/facebook_icon.png', 'Link to our facebook page');
-  const twitter = createImg('/Users/joeyweixel/repos/restaurant-page/src/twitter_icon.png', 'Link to our twitter page');
+  const insta = createImg(instagramImg, 'Link to our instagram page');
+  const facebook = createImg(facebookImg, 'Link to our facebook page');
+  const twitter = createImg(twitterImg, 'Link to our twitter page');
   socials.appendChild(insta);
   socials.appendChild(facebook);
   socials.appendChild(twitter);

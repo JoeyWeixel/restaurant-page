@@ -1,3 +1,7 @@
+import vanillaImg from "/Users/joeyweixel/repos/restaurant-page/src/vanilla_ice_cream.jpg";
+import chocolateImg from "/Users/joeyweixel/repos/restaurant-page/src/chocolate_ice_cream.jpeg";
+import mintchocImg from '/Users/joeyweixel/repos/restaurant-page/src/mintchoc_ice_cream.jpeg';
+
 function createHome() {
   const homeButton = document.getElementById('homeButton');
   homeButton.classList.add('active');
@@ -8,9 +12,9 @@ function createHome() {
   const spotlight = document.createElement('div');
   home.appendChild(spotlight);
   spotlight.classList.add('spotlight');
-  spotlight.appendChild(createImg("../src/vanilla_ice_cream.jpg", "Vanilla ice cream sundae"));
-  spotlight.appendChild(createImg("../src/chocolate_ice_cream.jpeg", "Bowl of chocolate ice cream"));
-  spotlight.appendChild(createImg("../src/mintchoc_ice_cream.jpeg", "Bowl of mint chocolate chip ice cream"));
+  spotlight.appendChild(createImg(vanillaImg, "Vanilla ice cream sundae"));
+  spotlight.appendChild(createImg(chocolateImg, "Bowl of chocolate ice cream"));
+  spotlight.appendChild(createImg(mintchocImg, "Bowl of mint chocolate chip ice cream"));
 
   //slogan
 

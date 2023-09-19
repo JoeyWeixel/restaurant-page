@@ -1,6 +1,7 @@
 import createHome from "./home";
 import createMenu from "./menu";
 import createContact from "./contact";
+import bowlImg from '/Users/joeyweixel/repos/restaurant-page/src/ice-bowl.svg';
 
 let curPage = 0;
 
@@ -38,7 +39,7 @@ function createFooter(){
   content.appendChild(footer);
   footer.classList.add('footer');
   
-  const footerLogo = createImg('../src/ice-bowl.svg', 'company logo');
+  const footerLogo = createImg(bowlImg, 'company logo');
   footerLogo.classList.add('logo');
   footer.appendChild(footerLogo);
 

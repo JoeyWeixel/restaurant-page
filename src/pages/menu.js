@@ -1,3 +1,8 @@
+import vanillaImg from "/Users/joeyweixel/repos/restaurant-page/src/vanilla_ice_cream.jpg";
+import chocolateImg from "/Users/joeyweixel/repos/restaurant-page/src/chocolate_ice_cream.jpeg";
+import mintchocImg from '/Users/joeyweixel/repos/restaurant-page/src/mintchoc_ice_cream.jpeg';
+import brownieSundae from '/Users/joeyweixel/repos/restaurant-page/src/brownie_sundae.jpeg';
+
 function createMenu(){
   const menuButton = document.getElementById('menuButton');
   menuButton.classList.add('active');
@@ -7,10 +12,10 @@ function createMenu(){
   main.appendChild(menu);
   menu.classList.add('menu');
 
-  menu.appendChild(createMenuCard('/Users/joeyweixel/repos/restaurant-page/src/chocolate_ice_cream.jpeg', 'Chocolate Scoop', '$3.99'));
-  menu.appendChild(createMenuCard('/Users/joeyweixel/repos/restaurant-page/src/vanilla_ice_cream.jpg', 'Vanilla Scoop', '$3.99'));
-  menu.appendChild(createMenuCard('/Users/joeyweixel/repos/restaurant-page/src/mintchoc_ice_cream.jpeg', 'Mint Chocolate Chip Scoop', '$3.99'));
-  menu.appendChild(createMenuCard('/Users/joeyweixel/repos/restaurant-page/src/brownie_sundae.jpeg', 'Brownie Sundae', '$5.99'));
+  menu.appendChild(createMenuCard(chocolateImg, 'Chocolate Scoop', '$3.99'));
+  menu.appendChild(createMenuCard(vanillaImg, 'Vanilla Scoop', '$3.99'));
+  menu.appendChild(createMenuCard(mintchocImg, 'Mint Chocolate Chip Scoop', '$3.99'));
+  menu.appendChild(createMenuCard(brownieSundae, 'Brownie Sundae', '$5.99'));
   
   return menu;
 }
